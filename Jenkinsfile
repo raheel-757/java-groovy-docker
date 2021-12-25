@@ -22,7 +22,7 @@ node('master')   {
    
       stage('Publish Docker Image'){
          withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerPWD')]) {
-              sh "docker login -u raheel -p ${dockerPWD}"
+              sh "docker login -u Raheel053 -p ${dockerPWD}"
          }
         sh "docker push ${dockerImageName}"
       }
